@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:27:34 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/21 18:54:57 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/19 16:33:55 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/21 18:10:29 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
+#include <unistd.h>
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int		ft_printf(char const *format, ...);
-int		ft_putchar(int c);
-int		ft_putstr(char *str);
-int		ft_strlen( const char *str);
-#endif
+int	ft_putchar(int c)
+{
+	return (write (1, &c, 1));
+}

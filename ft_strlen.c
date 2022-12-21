@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:27:34 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/21 18:54:57 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/21 18:34:47 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/21 18:37:27 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+int	ft_strlen( const char *str)
+{
+	int	size;
 
-int		ft_printf(char const *format, ...);
-int		ft_putchar(int c);
-int		ft_putstr(char *str);
-int		ft_strlen( const char *str);
-#endif
+	size = 0;
+	while (str && str[size])
+	{
+		++size;
+	}
+	return (size);
+}
