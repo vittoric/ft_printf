@@ -6,18 +6,21 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 18:31:20 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/21 19:41:01 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/28 11:28:59 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <unistd.h>
 
 int	ft_strlen( const char *str);
 
 int	ft_putstr(char *str)
 {
+	int	len;
+
 	if (!str)
-		return (write(1, "(null)", 6));
-	return (write(1, str, ft_strlen(str)));
+		str = "(null)";
+	len = ft_strlen(str);
+	return (write(1, str, len));
 }

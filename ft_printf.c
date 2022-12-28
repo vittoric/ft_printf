@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/21 18:56:23 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/28 12:04:06 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ static int	converter(char format, va_list args)
 		return (ft_putchar(va_arg(args, int)));
 	else if (format == 's')
 		return (ft_putstr(va_arg(args, char *)));
+	else if (format == 'p')
+		return (ft_print_ptr(va_arg(args, uintptr_t)));
+	else if (format == 'd' || format == 'i')
+		return (ft_putnbr(va_arg(args, int)));
 	return (1);
 }
 
@@ -48,17 +52,25 @@ int	ft_printf(char const *format, ...)
 	return (length);
 }
 
-int main (void)
+int	main(void)
 {
-    char *str;
-    int n;
-    char c;
-    unsigned int un;
+	char			*str;
+	int				n;
+	char			c;
+	unsigned int	un;
+	int 	x;
+	void	 *ptr;
 
-    c = 'a';
+	c = 'a';
 	str = "Unicorns dose not exists";
-    ft_printf("El caracter es %c\n", c);
-    printf("El caracter es %c\n", c);
-	ft_printf("La string es: %s\n", str);
-    printf("La string es: %s\n", str);
+	x = 123;
+	ptr = &x;
+	ft_printf("El caracter es %c\n", c);
+	printf("El caracter es %c\n", c);
+	ft_printf("String: %s\n", str);
+	printf("String: %s\n", str);
+	ft_printf("Puntero: %p\n", ptr);
+	printf("Puntero: %p\n", ptr);
+	ft_printf("Numero entero: %d\n", 214748364);
+	printf("Numero entero: %d\n", 214748364);
 }

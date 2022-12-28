@@ -6,7 +6,7 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/19 17:18:20 by vcodrean          #+#    #+#              #
-#    Updated: 2022/12/21 18:38:07 by vcodrean         ###   ########.fr        #
+#    Updated: 2022/12/28 11:54:37 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,10 @@ SRCS =	ft_putchar.c \
 				ft_printf.c \
 				ft_putstr.c \
 				ft_strlen.c \
+				ft_putchar_fd.c \
+				ft_print_ptr.c \
+				ft_putnbr.c \
+				
 								
 OBJS = $(SRCS:.c=.o) 
 

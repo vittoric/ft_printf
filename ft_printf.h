@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:27:34 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/21 18:54:57 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/28 11:54:24 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,8 @@ int		ft_printf(char const *format, ...);
 int		ft_putchar(int c);
 int		ft_putstr(char *str);
 int		ft_strlen( const char *str);
+void	ft_putchar_fd(char c, int fd);
+int		ft_print_ptr(uintptr_t ptr);
+int		ft_putnbr(int n);
+
 #endif

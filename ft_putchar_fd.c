@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:33:55 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/28 11:29:02 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/28 11:09:47 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/28 11:29:07 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <unistd.h>
 
-int	ft_putchar(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	return (write (1, &c, 1));
+	write(fd, &c, 1);
 }
