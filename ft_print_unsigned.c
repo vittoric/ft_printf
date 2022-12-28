@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/28 11:48:35 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/28 13:02:53 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/28 13:13:07 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/28 13:25:08 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_print_unsigned(unsigned int num)
 {
-	if (n == -2147483648)
+	int	n;
+
+	n = 0;
+	if (num > 9)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
+		n += ft_print_unsigned(num / 10);
 	}
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-n);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
-	return (n);
+	return (n += ft_putchar(num % 10 + '0'));
 }

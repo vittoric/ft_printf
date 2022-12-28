@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/28 12:04:06 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/28 14:12:21 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ static int	converter(char format, va_list args)
 		return (ft_print_ptr(va_arg(args, uintptr_t)));
 	else if (format == 'd' || format == 'i')
 		return (ft_putnbr(va_arg(args, int)));
+	else if (format == 'u')
+		return (ft_print_unsigned(va_arg(args, unsigned int)));
+	else if (format == x)
+	 return ()
 	return (1);
 }
 
@@ -71,6 +75,8 @@ int	main(void)
 	printf("String: %s\n", str);
 	ft_printf("Puntero: %p\n", ptr);
 	printf("Puntero: %p\n", ptr);
-	ft_printf("Numero entero: %d\n", 214748364);
-	printf("Numero entero: %d\n", 214748364);
+	ft_printf("Int max: %d, Int min: %i\n", 2147483647, -2147483648);
+	printf("Int max: %d, Int max: %i\n", 2147483647, -2147483648);
+	ft_printf("Unsigned int: %u\n", 4294967295);
+	printf("Unsigned int: %u\n", 4294967295);
 }
