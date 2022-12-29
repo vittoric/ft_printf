@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:27:34 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/29 09:59:14 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/29 09:48:57 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/29 10:05:15 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+int	ft_print_hex(unsigned int nr, char *base)
+{
+	int		nr_base[16];
+	int		i;
+	int		result;
 
-int		ft_printf(char const *format, ...);
-int		ft_putchar(int c);
-int		ft_putstr(char *str);
-int		ft_strlen( const char *str);
-void	ft_putchar_fd(char c, int fd);
-int		ft_print_ptr(uintptr_t ptr);
-int		ft_putnbr(int n);
-int		ft_print_unsigned(unsigned int num);
-int		ft_print_hex(unsigned int nr, char *base);
-
-#endif
+	i = 0;
+	result = 0;
+	if (nr == 0)
+		result += ft_putchar('0');
+	while (nr)
+	{
+		nr_base[i] = nr % 16;
+		nr = nr / 16;
+		i++;
+	}
+	while (--i >= 0)
+		result += ft_putchar(base[nr_base[i]]);
+	return (result);
+}
