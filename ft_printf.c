@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/29 10:19:25 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:23:15 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_printf(char const *format, ...)
 	return (length);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char			*str;
 	int				n;
@@ -79,12 +79,12 @@ int	main(void)
 	printf("String: %s\n", str);
 	ft_printf("Puntero: %p\n", ptr);
 	printf("Puntero: %p\n", ptr);
-	ft_printf("Int max: %d, Int min: %i\n", 2147483647, -2147483647);
-	printf("Int max: %d, Int max: %i\n", 2147483647, -2147483647);
+	ft_printf("Int max: %d, Int min: %i\n", 0, -521);
+	printf("Int max: %d, Int max: %i\n", 0, 521);
 	ft_printf("Unsigned int: %u\n", 4294967295);
 	printf("Unsigned int: %u\n", 429496729);
 	ft_printf("Hexadecimal en minuscula: %x\n", 255);
 	printf("Hexadecimal en minuscula:: %x\n", 255);
 	ft_printf("Hexadecimal en minuscula: %X\n", 255);
-	printf("Hexadecimal en %minuscula:: %X\n", 255);
 }
+*/

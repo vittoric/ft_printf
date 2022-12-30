@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:48:35 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/28 13:02:53 by vcodrean         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:24:14 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 
 int	ft_putnbr(int n)
 {
+	unsigned int	i;
+
+	i = 0;
 	if (n == -2147483648)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
+		write(1, "-2147483648", 11);
+		return (11);
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
-		ft_putchar('-');
-		ft_putnbr(-n);
+		i += ft_putchar('-');
+		n *= -1;
 	}
-	else if (n > 9)
+	if (n > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		i += ft_putnbr(n / 10);
+		i += ft_putchar(n % 10 + '0');
 	}
 	else
-		ft_putchar(n + '0');
-	return (n);
+		i += ft_putchar(n + '0');
+	return (i);
 }
+
+

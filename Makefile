@@ -6,11 +6,11 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/19 17:18:20 by vcodrean          #+#    #+#              #
-#    Updated: 2022/12/29 09:49:10 by vcodrean         ###   ########.fr        #
+#    Updated: 2022/12/29 10:25:14 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= ftprintf.a
+NAME= libftprintf.a
 
 CC= gcc
 CFLAGS= -Wall -Wextra -Werror
