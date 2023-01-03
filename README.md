@@ -27,7 +27,7 @@ La variable `va_list` se usa para contener una lista de argumentos de diferentes
 
 ### converter
 
-El convertidor es una función que procesa un solo argumento en una va_list y lo formatea de acuerdo con el especificador de formato dado. Toma un char que representa el especificador de formato y una va_list como argumentos, y devuelve un int que indica el número de caracteres impresos.
+El [convertidor](/ft_printf.c) es una función que procesa un solo argumento en una va_list y lo formatea de acuerdo con el especificador de formato dado. Toma un char que representa el especificador de formato y una va_list como argumentos, y devuelve un int que indica el número de caracteres impresos.
 
 La función primero verifica el valor del parámetro de formato y llama a la función adecuada para procesar el argumento. Por ejemplo, si el formato es 'c', la función llama a ft_putchar para imprimir un solo carácter de va_list. Si el formato es 's', la función llama a ft_putstr para imprimir una cadena terminada en nulo. Si el formato es 'p', la función llama a ft_print_ptr para imprimir un valor de puntero.
 
@@ -49,7 +49,7 @@ Por ejemplo, si el valor pasado a ft_print_hex es 10 (decimal), la función impr
 
 Esta cadena se utiliza para especificar que los dígitos hexadecimales deben imprimirse en minúsculas. Si quisiera imprimir los dígitos hexadecimales en mayúsculas, podría usar la cadena "0123456789ABCDEF" en su lugar.
 
-### ft_print_hex
+### [ft_print_hex](/ft_print_hex.c) 
 
 ft_print_hex es una función que imprime un valor entero sin signo como un número hexadecimal. Toma un valor int sin signo y una cadena de dígitos hexadecimales como argumentos y devuelve un int que indica el número de caracteres impresos.
 
@@ -69,7 +69,7 @@ Para lograr esto, la función primero convierte el número entero a su represent
 
 Una vez que el valor se ha convertido a su representación hexadecimal, la función itera sobre la matriz nr_base en orden inverso e imprime cada dígito usando la función ft_putchar. Esto asegura que los dígitos se impriman en el orden correcto, con el dígito más significativo primero y el dígito menos significativo al final.
 
-### ft_print_ptr
+### [ft_print_ptr](/ft_print_ptr.c) 
 
 Función para imprimir un puntero (uintptr_t) en formato hexadecimal. 
 `ft_print_ptr` es la función principal para imprimir un puntero. Escribe la cadena "0x" en stdout para indicar que el siguiente valor es un número hexadecimal. Si el valor del puntero es cero, escribe un único carácter '0' en la salida estándar. De lo contrario, llama a ft_put_ptr para imprimir la representación hexadecimal del puntero y devuelve la cantidad de caracteres escritos, que es igual a la cantidad de dígitos en la representación hexadecimal más 2 para el prefijo "0x".
@@ -78,7 +78,7 @@ Función para imprimir un puntero (uintptr_t) en formato hexadecimal.
 
 `ft_put_ptr` imprime recursivamente la representación hexadecimal del valor del puntero. Lo hace dividiendo el valor del puntero por 16 e imprimiendo el resto, luego continúa con el cociente hasta que alcanza un valor inferior a 16. Para valores inferiores a 10, imprime el carácter ASCII correspondiente al dígito (por ejemplo, '0' para 0, '1' por 1, etc.), y para valores superiores a 9 imprime el carácter ASCII correspondiente al dígito hexadecimal (ej. 'a' por 10, 'b' por 11, etc.).
 
-## ft_print_unsigned
+## [ft_print_unsigned](/ft_print_unsigned.c) 
 
 
 ### Links utiles
