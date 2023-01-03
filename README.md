@@ -24,5 +24,5 @@ Una vez que el valor se ha convertido a su representación hexadecimal, la funci
 
 ### Links utiles
 https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/ <br>
-https://en.cppreference.com/w/c/language/variadic
-https://en.cppreference.com/w/c/variadic
+https://en.cppreference.com/w/c/language/variadic<br>
+https://en.cppreference.com/w/c/variadic<br>
