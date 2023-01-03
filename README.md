@@ -36,6 +36,12 @@ Cada una de las funciones llamadas por el convertidor toma un solo argumento de 
 
 Una vez que el argumento ha sido procesado e impreso, el convertidor devuelve el número de caracteres impresos. Si no se reconoce el parámetro de formato, la función devuelve 1.
 
+
+### ¿Que es uintptr_t?
+uintptr_t es un tipo entero sin signo definido en el encabezado stdint.h. Está diseñado específicamente para contener un valor de puntero y se garantiza que sea lo suficientemente grande como para contener cualquier puntero válido en el sistema host.
+
+El tipo uintptr_t se define como un tipo entero sin signo con el mismo tamaño que un puntero. En un sistema de 32 bits, normalmente se define como un alias para unsigned int, mientras que en un sistema de 64 bits normalmente se define como un alias para unsigned long long.
+
 ### ft_print_hex
 
 ft_print_hex es una función que imprime un valor entero sin signo como un número hexadecimal. Toma un valor int sin signo y una cadena de dígitos hexadecimales como argumentos y devuelve un int que indica el número de caracteres impresos.
