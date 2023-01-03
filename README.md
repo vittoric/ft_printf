@@ -23,6 +23,7 @@ Para lograr esto, la función primero convierte el número entero a su represent
 Una vez que el valor se ha convertido a su representación hexadecimal, la función itera sobre la matriz nr_base en orden inverso e imprime cada dígito usando la función ft_putchar. Esto asegura que los dígitos se impriman en el orden correcto, con el dígito más significativo primero y el dígito menos significativo al final.
 
 ### Links utiles
-https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/ <br>
+[Funciones variádicas]([https://pages.github.com/](https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/ ))<br>
+
 https://en.cppreference.com/w/c/language/variadic<br>
 https://en.cppreference.com/w/c/variadic<br>
