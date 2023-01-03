@@ -79,6 +79,8 @@ Función para imprimir un puntero (uintptr_t) en formato hexadecimal.
 
 `ft_put_ptr` imprime recursivamente la representación hexadecimal del valor del puntero. Lo hace dividiendo el valor del puntero por 16 e imprimiendo el resto, luego continúa con el cociente hasta que alcanza un valor inferior a 16. Para valores inferiores a 10, imprime el carácter ASCII correspondiente al dígito (por ejemplo, '0' para 0, '1' por 1, etc.), y para valores superiores a 9 imprime el carácter ASCII correspondiente al dígito hexadecimal (ej. 'a' por 10, 'b' por 11, etc.).
 
+## ft_print_unsigned
+
 
 ### Links utiles
 [Funciones variádicas](https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/) <br>
