@@ -6,13 +6,13 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/30 18:23:15 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:44:05 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdarg.h>
 #include <unistd.h>
+#include <stdint.h>
 #include "ft_printf.h"
 
 static int	converter(char format, va_list args)

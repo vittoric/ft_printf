@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:48:35 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/30 18:24:14 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:02:18 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,3 @@ int	ft_putnbr(int n)
 		i += ft_putchar(n + '0');
 	return (i);
 }
-
-
