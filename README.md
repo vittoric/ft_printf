@@ -93,7 +93,7 @@ Por ejemplo, si se llama a la función con el valor 123, primero imprimirá 3, l
 La función toma un solo argumento:
 
 - `int n`: el valor entero a escribir.
-- 
+
 La función primero verifica si el valor es igual a `-2147483648`, que es el valor mínimo que se puede almacenar en un tipo `int` de 32 bits. Si el valor es igual a este caso especial, la función escribe la cadena "-2147483648" en stdout y devuelve 11, que es el número de caracteres escritos.
 
 Si el valor no es igual a este caso especial, la función comprueba si el valor es negativo. Si es así, la función escribe un signo menos en stdout y establece `i` en 1 (para contar el signo menos como 1 carácter escrito). Luego niega el valor de `n` y almacena el resultado en una nueva variable `i` de tipo `int` sin signo. Esto se hace porque el resto de la función espera que el valor no sea negativo y el tipo `int` sin signo no puede representar valores negativos.
