@@ -1,6 +1,7 @@
  # ft_printf es un proyecto que imita la función printf real<hr>
 
-[ft_printf](/ft_printf.c) es una función que formatea e imprime la salida en stdout (típicamente la terminal). Toma una cadena de formato, que especifica cómo se debe formatear la salida, y un número variable de argumentos que contienen los valores que se imprimirán.
+## [ft_printf](/ft_printf.c) 
+`ft_printf`es una función que formatea e imprime la salida en stdout (típicamente la terminal). Toma una cadena de formato, que especifica cómo se debe formatear la salida, y un número variable de argumentos que contienen los valores que se imprimirán.
 
 La función comienza inicializando una lista de argumentos variables usando va_start. Luego itera a través de la cadena de formato, carácter por carácter. Cuando encuentra un carácter '%', llama a la función de conversión con el siguiente carácter en la cadena de formato y el argumento actual de la lista de argumentos. La función de conversión procesa el argumento y lo formatea de acuerdo con el especificador de conversión correspondiente (el carácter después del '%'). Si el carácter no es un '%', se llama a ft_putchar para imprimir el carácter. Finalmente, la función devuelve el número total de caracteres impresos.
 
