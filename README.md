@@ -72,7 +72,7 @@ Una vez que el valor se ha convertido a su representación hexadecimal, la funci
 
 ### ft_print_ptr
 
-Funcionn para imprimir un puntero (uintptr_t) en formato hexadecimal. 
+Función para imprimir un puntero (uintptr_t) en formato hexadecimal. 
 `ft_print_ptr` es la función principal para imprimir un puntero. Escribe la cadena "0x" en stdout para indicar que el siguiente valor es un número hexadecimal. Si el valor del puntero es cero, escribe un único carácter '0' en la salida estándar. De lo contrario, llama a ft_put_ptr para imprimir la representación hexadecimal del puntero y devuelve la cantidad de caracteres escritos, que es igual a la cantidad de dígitos en la representación hexadecimal más 2 para el prefijo "0x".
 
 `ft_ptr_len` calcula el número de dígitos necesarios para representar el puntero en hexadecimal. Lo hace dividiendo el valor del puntero por 16 (que es la base del sistema numérico hexadecimal) repetidamente hasta que el cociente sea cero.
