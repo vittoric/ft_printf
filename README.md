@@ -80,6 +80,27 @@ Función para imprimir un puntero (uintptr_t) en formato hexadecimal.
 
 ## [ft_print_unsigned](/ft_print_unsigned.c) 
 
+Esta función es una implementación personalizada de printf en el lenguaje de programación C, específicamente para imprimir un número entero sin signo (int sin signo) en formato decimal.
+
+La función usa la recursividad para imprimir la representación decimal del valor entero. Lo hace dividiendo el valor por 10 e imprimiendo el resto, luego continúa con el cociente hasta que llega a un valor inferior a 10. Para cada división, la función incrementa un contador n en 1. Finalmente, la función devuelve el valor de n , que es igual al número de dígitos en la representación decimal del entero.
+
+Por ejemplo, si se llama a la función con el valor 123, primero imprimirá 3, luego 2, luego 1 y devolverá 3. La salida a stdout será "123".
+
+## [ft_putnbr](/ft_putnbr.c)
+
+`ft_putnbr` es una función que escribe un valor entero en stdout como una cadena de dígitos en formato decimal.
+
+La función toma un solo argumento:
+
+- `int n`: el valor entero a escribir.
+- 
+La función primero verifica si el valor es igual a `-2147483648`, que es el valor mínimo que se puede almacenar en un tipo `int` de 32 bits. Si el valor es igual a este caso especial, la función escribe la cadena "-2147483648" en stdout y devuelve 11, que es el número de caracteres escritos.
+
+Si el valor no es igual a este caso especial, la función comprueba si el valor es negativo. Si es así, la función escribe un signo menos en stdout y establece `i` en 1 (para contar el signo menos como 1 carácter escrito). Luego niega el valor de `n` y almacena el resultado en una nueva variable `i` de tipo `int` sin signo. Esto se hace porque el resto de la función espera que el valor no sea negativo y el tipo `int` sin signo no puede representar valores negativos.
+
+A continuación, la función comprueba si el valor es mayor que 9. Si lo es, la función recursivamente se llama a sí misma con el valor `n/10` (que es el cociente de n dividido por 10). Esto continúa hasta que el valor es inferior a 10, momento en el que la función escribe el valor en stdout como un solo dígito.
+
+Finalmente, la función devuelve el número total de caracteres escritos, que es igual al número de dígitos en la representación decimal del valor entero más el signo menos si el valor fuera negativo.
 
 ### Links utiles
 [Funciones variádicas](https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/) <br>
