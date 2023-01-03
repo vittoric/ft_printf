@@ -1,7 +1,7 @@
  # ft_printf
 ft_printf es un proyecto que imita la función printf real<hr>
 
-## [ft_printf](/ft_printf.c)
+[ft_printf](/ft_printf.c)
 ## []() 
 es una función que formatea e imprime la salida en stdout (típicamente la terminal). Toma una cadena de formato, que especifica cómo se debe formatear la salida, y un número variable de argumentos que contienen los valores que se imprimirán.
 
