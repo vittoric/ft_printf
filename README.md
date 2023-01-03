@@ -16,8 +16,6 @@ Una vez que el valor se ha convertido a su representación hexadecimal, la funci
 
 Si el valor pasado a la función es 0, la función imprime un solo carácter '0' y devuelve 1. De lo contrario, devuelve el número de caracteres impresos.
 
-Es probable que la función ft_print_hex se use para imprimir valores en formato hexadecimal para la depuración u otros fines. La representación hexadecimal de un valor suele ser más fácil de leer y comprender que la representación decimal o binaria, especialmente cuando se trabaja con operaciones bit a bit o direcciones de memoria.
-
 La función itera sobre la matriz de dígitos en orden inverso porque la representación hexadecimal de un número entero se imprime con el dígito más significativo primero y el dígito menos significativo al final.
 
 Por ejemplo, el entero decimal 123 se representa como 0x7b en hexadecimal. Para imprimir este valor, la función necesita imprimir los dígitos '7' y 'b' en ese orden.
