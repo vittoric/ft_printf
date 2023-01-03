@@ -4,7 +4,7 @@ https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/
 https://en.cppreference.com/w/c/language/variadic
 https://en.cppreference.com/w/c/variadic
 
-#ft_print_hex
+###ft_print_hex
 
 ft_print_hex es una función que imprime un valor entero sin signo como un número hexadecimal. Toma un valor int sin signo y una cadena de dígitos hexadecimales como argumentos y devuelve un int que indica el número de caracteres impresos.
 
