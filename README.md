@@ -70,6 +70,16 @@ Para lograr esto, la función primero convierte el número entero a su represent
 
 Una vez que el valor se ha convertido a su representación hexadecimal, la función itera sobre la matriz nr_base en orden inverso e imprime cada dígito usando la función ft_putchar. Esto asegura que los dígitos se impriman en el orden correcto, con el dígito más significativo primero y el dígito menos significativo al final.
 
+### ft_print_ptr
+
+Funcionn para imprimir un puntero (uintptr_t) en formato hexadecimal. 
+`ft_print_ptr` es la función principal para imprimir un puntero. Escribe la cadena "0x" en stdout para indicar que el siguiente valor es un número hexadecimal. Si el valor del puntero es cero, escribe un único carácter '0' en la salida estándar. De lo contrario, llama a ft_put_ptr para imprimir la representación hexadecimal del puntero y devuelve la cantidad de caracteres escritos, que es igual a la cantidad de dígitos en la representación hexadecimal más 2 para el prefijo "0x".
+
+`ft_ptr_len` calcula el número de dígitos necesarios para representar el puntero en hexadecimal. Lo hace dividiendo el valor del puntero por 16 (que es la base del sistema numérico hexadecimal) repetidamente hasta que el cociente sea cero.
+
+`ft_put_ptr` imprime recursivamente la representación hexadecimal del valor del puntero. Lo hace dividiendo el valor del puntero por 16 e imprimiendo el resto, luego continúa con el cociente hasta que alcanza un valor inferior a 16. Para valores inferiores a 10, imprime el carácter ASCII correspondiente al dígito (por ejemplo, '0' para 0, '1' por 1, etc.), y para valores superiores a 9 imprime el carácter ASCII correspondiente al dígito hexadecimal (ej. 'a' por 10, 'b' por 11, etc.).
+
+
 ### Links utiles
 [Funciones variádicas](https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/) <br>
 [Variadic arguments](https://en.cppreference.com/w/c/language/variadic) <br>
