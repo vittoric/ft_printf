@@ -42,6 +42,14 @@ uintptr_t es un tipo entero sin signo definido en el encabezado stdint.h. Está 
 
 El tipo uintptr_t se define como un tipo entero sin signo con el mismo tamaño que un puntero. En un sistema de 32 bits, normalmente se define como un alias para unsigned int, mientras que en un sistema de 64 bits normalmente se define como un alias para unsigned long long.
 
+### ¿Por que pasamos como argumento la cadena "0123456789abcdef"?
+`0123456789abcdef` es una cadena que especifica el orden en que se deben imprimir los dígitos de un número hexadecimal.
+Cuando llame a ft_print_hex con esta cadena como segundo argumento, la función imprimirá el valor entero sin signo dado como un número hexadecimal usando los dígitos '0' a 'f' en el orden especificado por la cadena.
+
+Por ejemplo, si el valor pasado a ft_print_hex es 10 (decimal), la función imprimirá 'a' porque 'a' es el sexto carácter de la cadena y 10 (decimal) es el sexto dígito en el sistema numérico hexadecimal.
+
+Esta cadena se utiliza para especificar que los dígitos hexadecimales deben imprimirse en minúsculas. Si quisiera imprimir los dígitos hexadecimales en mayúsculas, podría usar la cadena "0123456789ABCDEF" en su lugar.
+
 ### ft_print_hex
 
 ft_print_hex es una función que imprime un valor entero sin signo como un número hexadecimal. Toma un valor int sin signo y una cadena de dígitos hexadecimales como argumentos y devuelve un int que indica el número de caracteres impresos.
