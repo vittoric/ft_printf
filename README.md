@@ -102,6 +102,23 @@ A continuación, la función comprueba si el valor es mayor que 9. Si lo es, la 
 
 Finalmente, la función devuelve el número total de caracteres escritos, que es igual al número de dígitos en la representación decimal del valor entero más el signo menos si el valor fuera negativo.
 
+
+## [ft_putstr](/ft_putstr.c)
+
+`ft_putstr` es una función que escribe una cadena en stdout.
+
+La función toma un solo argumento:
+
+-`char *str`: un puntero a la cadena terminada en nulo para escribir.
+
+La función primero comprueba si `str` es un puntero nulo. Si es así, la función establece `str` en la cadena "(null)". Esto se hace para evitar que la función se bloquee si se pasa un puntero nulo como argumento.
+
+A continuación, la función calcula la longitud de la cadena llamando a `ft_strlen` y pasándole `str`. `ft_strlen` es una función personalizada que devuelve el número de caracteres en una cadena terminada en nulo, sin incluir el terminador nulo.
+
+Finalmente, la función escribe la cadena en stdout llamando a la función de escritura y pasándole el descriptor de archivo 1 (para stdout), un puntero a la cadena y la longitud de la cadena. La función de escritura es una función de biblioteca C estándar que escribe datos en un archivo u otro flujo de salida.
+
+La función devuelve el número de caracteres escritos, que es igual a la longitud de la cadena.
+
 ### Links utiles
 [Funciones variádicas](https://trucosinformaticos.wordpress.com/2018/11/25/funciones-variadicas/) <br>
 [Variadic arguments](https://en.cppreference.com/w/c/language/variadic) <br>
