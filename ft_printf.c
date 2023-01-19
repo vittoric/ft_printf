@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/01/03 13:44:05 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/04 16:30:24 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,11 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (length);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
 	char			*str;
-	int				n;
 	char			c;
-	unsigned int	un;
 	int 	x;
 	void	 *ptr;
 
