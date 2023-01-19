@@ -6,12 +6,11 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 11:09:47 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/28 11:29:07 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:26:03 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

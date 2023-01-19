@@ -6,13 +6,10 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 16:15:38 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/01/04 16:30:24 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:26:32 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdint.h>
 #include "ft_printf.h"
 
 static int	converter(char format, va_list args)
@@ -59,30 +56,3 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (length);
 }
-/*
-int	main(void)
-{
-	char			*str;
-	char			c;
-	int 	x;
-	void	 *ptr;
-
-	c = 'a';
-	str = "Unicorns dose not exists";
-	x = 123;
-	ptr = &x;
-	ft_printf("El caracter es %c\n", c);
-	printf("El caracter es %c\n", c);
-	ft_printf("String: %s\n", str);
-	printf("String: %s\n", str);
-	ft_printf("Puntero: %p\n", ptr);
-	printf("Puntero: %p\n", ptr);
-	ft_printf("Int max: %d, Int min: %i\n", 0, -521);
-	printf("Int max: %d, Int max: %i\n", 0, 521);
-	ft_printf("Unsigned int: %u\n", 4294967295);
-	printf("Unsigned int: %u\n", 429496729);
-	ft_printf("Hexadecimal en minuscula: %x\n", 255);
-	printf("Hexadecimal en minuscula:: %x\n", 255);
-	ft_printf("Hexadecimal en minuscula: %X\n", 255);
-}
-*/

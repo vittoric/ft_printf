@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:27:34 by vcodrean          #+#    #+#             */
-/*   Updated: 2022/12/30 18:12:18 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:25:42 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <stdint.h>
 
 int		ft_printf(char const *format, ...);
 int		ft_putchar(int c);
